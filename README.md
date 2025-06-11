@@ -48,7 +48,6 @@ Tento graf zobrazuje 5 nejvýkonnějších kategorií z hlediska zisku a jejich 
 - Nejvyšší zisk: **Mobily a hodinky**  
 - Nejvyšší marže: **Kávovary** (28 %)
 
-![Top 5 zisk a marže](images/GRAF_porovnání%20top%205%20kategorií%20dle%20marže%20a%20zisku.jpg)
 ---
 ## Složky projektu:
 - `/data/` – vstupní dataset
