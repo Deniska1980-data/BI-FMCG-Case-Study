@@ -42,9 +42,13 @@ Klíčové výstupy
 - Prosinec 2024 byl z hlediska tržeb i zisků vrchol sezóny.
 - Nejvyšší absolutní zisk přinesly **mobily a TV**, přestože měly nižší marže.
 - **Kávovary a gaming** mají naopak vyšší marži, ale nižší obrat.
-- ➤ Viz graf níže – srovnání zisku a marže u top 5 kategorií:
+- 
+### Porovnání top 5 kategorií podle zisku a marže – Prosinec 2024
+Tento graf zobrazuje 5 nejvýkonnějších kategorií z hlediska zisku a jejich průměrnou marži v prosinci 2024.
+- Nejvyšší zisk: **Mobily a hodinky**  
+- Nejvyšší marže: **Kávovary** (28 %)
 
-![Top 5 zisk a marže – Prosinec 2024](images/top5_zisk_marze_prosinec2024.png)
+![Top 5 zisk a marže](images/GRAF_porovnání%20top%205%20kategorií%20dle%20marže%20a%20zisku.jpg)
 
 ---
 ## Složky projektu:
