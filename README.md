@@ -17,6 +17,35 @@
 - Dopad promo akcí typu **2+1** na marži a logistiku
 - Predikce růstu poptávky na jaře u kategorií jako **outdoor, sport, zdraví**
 - BI doporučení pro strategické rozhodování
+
+- Porovnávali jsme, Top 5 kategorií podle: zisku v Kč (sloupce) a marže v % (zelená čára)
+
+Co jsme počítali:
+Zisk = tržba × marže (pro každou kategorii)
+Marže – byla různá pro každou kategorii podle reálných odhadů:
+Mobily a hodinky: 20 %
+TV a foto: 22 %
+Velké spotřebiče: 24 %
+Kávovary: 28 %
+Gaming a hry: 25 %
+
+Kategorie byly seřazeny podle výše zisku v prosinci 2024:
+Nejvyšší zisk: Mobily a hodinky
+Nejvyšší marže: Kávovary
+
+Co tím graf ukazuje: I když mají mobily nejvyšší zisk, jejich marže je nejnižší
+Kávovary mají nižší brat, ale nejvyšší maržovost (28 %)
+Tento pohled je skvělý pro obchodní rozhodování: kde je objem vs. kde je zisk
+
+Klíčové výstupy
+
+- Prosinec 2024 byl z hlediska tržeb i zisků vrchol sezóny.
+- Nejvyšší absolutní zisk přinesly **mobily a TV**, přestože měly nižší marže.
+- **Kávovary a gaming** mají naopak vyšší marži, ale nižší obrat.
+- ➤ Viz graf níže – srovnání zisku a marže u top 5 kategorií:
+
+![Top 5 zisk a marže – Prosinec 2024](images/top5_zisk_marze_prosinec2024.png)
+
 ---
 ## Složky projektu:
 - `/data/` – vstupní dataset
