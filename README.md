@@ -69,18 +69,24 @@ Na základě předchozích sezón a zákaznického chování jsme vytvořili pre
 ## Výsledky analýzy a vizualizace
 
 ### Celková tržba podle měsíců
+Tento graf ukazuje výrazný nárůst tržeb v prosinci díky sezónním akcím a vánočnímu chování zákazníků
 ![Tržby](celkova_trzba_mesice_listopad_prosinec2024.jpg)
 
 ### Modelace prodaného množství (Listopad – Leden)
+Predikce ukazuje, jak povánoční výprodeje mohou ovlivnit chování zákazníků v lednu.
 ![Modelace](modelace_prodane_mnozstvi_kategorie.jpg)
 
 ### Tržby za drogerii a kosmetiku
-![Drogerie a kosmetika](porovnanitrzby_za_drogerii_kosmetiku.jpg)
+Zde lze vidět pokles v prosinci – doporučujeme zvážit krátkodobou promo akci typu 2+1.
+![Porovnání tržeb za drogerii a kosmetiku](porovnani_trzby_drogerie_kosmetika.jpg)
 
 ### Tržby podle kategorií
+Top 3 kategorie generující nejvyšší tržby:
+Mobily a hodinky, TV a foto, Počítače a notebooky
 ![Sortiment](celkove_trzby_dle_sortimentu.jpg)
 
 ### Podíl tržeb za jednotlivé TV modely – Leden 2025
+Nejvíce táhne LG OLED 65", vhodné pro akční promo nebo zásobovací prioritu.
 ![TV modely](trzby_jednotlivychTVmodelu_leden2025.jpg)
 
 ---
