@@ -35,7 +35,7 @@ Tento graf ukazuje, které kategorie generovaly nejvyšší **zisk** a jakou mě
 - Nejvyšší zisk: **Mobily a hodinky**
 - Nejvyšší marže: **Kávovary (28 %)**
 
-![Top 5 zisk a marže](images/GRAF_porovnání%20top%205%20kategorií%20dle%20marže%20a%20zisku.jpg)
+![Top 5 zisk a marže](top5_zisk_marze_prosinec2024.jpg)
 
 ---
 ## Predikce jaro 2025
