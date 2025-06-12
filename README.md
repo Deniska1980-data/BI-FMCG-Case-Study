@@ -27,6 +27,16 @@ Porovnávali jsme výkonnost klíčových značek **mobilních telefonů** v mě
 | Xiaomi     | 611 000 Kč     | 694 000 Kč     |
 
 **Závěr:** Ve všech značkách došlo k nárůstu tržeb v prosinci, nejvíce u **iPhonu**.
+
+## Porovnání zisku podle kategorií – Listopad vs. Prosinec 2024
+
+Následující graf ukazuje, jak se změnil zisk napříč jednotlivými kategoriemi mezi listopadem a prosincem 2024.
+
+- Největší nárůst zaznamenaly **mobily a hodinky**, **potraviny**, **TV a foto**.
+- Naopak kosmetika, drogerie a kuchyňské potřeby zůstaly spíše stabilní.
+
+![Porovnání zisku – Listopad vs. Prosinec 2024](porovnani_zisku_katergorie_listopad_prosinec2024.jpg)
+
 ---
 ## Porovnání top 5 kategorií podle zisku a marže – Prosinec 2024
 
@@ -40,10 +50,13 @@ Tento graf ukazuje, které kategorie generovaly nejvyšší **zisk** a jakou mě
 ---
 ## Predikce jaro 2025
 
-Na základě sezónnosti a předchozích let očekáváme:
-- Růst poptávky po **kosmetice, sportovních potřebách a domácích spotřebičích**
-- Pokles poptávky u **elektroniky** (kvůli vánoční saturaci trhu)
-- Doporučení: podpořit kategorie jako **outdoor, péče o tělo, zdraví** formou **krátkých promo (max 14 dní)**
+Na základě předchozích sezón a zákaznického chování jsme vytvořili predikci nejvýkonnějších kategorií pro jarní období:
+
+- Nejvyšší odhad tržeb: **Sport a outdoor**
+- Stabilní výkon: **Kosmetika, domácí spotřebiče, kávovary**
+- Doporučení: zaměřit promo a zásobování na tyto segmenty
+
+![Predikce jaro 2025](predikce_trzby_jarokampan2025.jpg)
 ---
 ## Klíčové BI závěry
 
