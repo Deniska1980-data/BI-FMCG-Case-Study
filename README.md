@@ -69,19 +69,19 @@ Na základě předchozích sezón a zákaznického chování jsme vytvořili pre
 ## Výsledky analýzy a vizualizace
 
 ### Celková tržba podle měsíců
-![Tržby](images/celkova_trzba_mesice_listopad_prosinec2024.jpg)
+![Tržby](celkova_trzba_mesice_listopad_prosinec2024.jpg)
 
 ### Modelace prodaného množství (Listopad – Leden)
-![Modelace](images/modelace_prodane_mnozstvi_kategorie.jpg)
+![Modelace](modelace_prodane_mnozstvi_kategorie.jpg)
 
 ### Tržby za drogerii a kosmetiku
-![Drogerie a kosmetika](images/porovnanitrzby_za_drogerii_kosmetiku.jpg)
+![Drogerie a kosmetika](porovnanitrzby_za_drogerii_kosmetiku.jpg)
 
 ### Tržby podle kategorií
-![Sortiment](images/celkove_trzby_dle_sortimentu.jpg)
+![Sortiment](celkove_trzby_dle_sortimentu.jpg)
 
 ### Podíl tržeb za jednotlivé TV modely – Leden 2025
-![TV modely](images/trzby_jednotlivychTVmodelu_leden2025.jpg)
+![TV modely](trzby_jednotlivychTVmodelu_leden2025.jpg)
 
 ---
 ## Struktura projektu
