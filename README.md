@@ -17,7 +17,7 @@ Cílem této BI analýzy bylo:
 ---
 ## SQL porovnání značek (listopad vs. prosinec)
 
-Porovnávali jsme výkonnost klíčových značek **mobilních telefonů** v měsících:
+Porovnávala jsem výkonnost klíčových značek **mobilních telefonů** v měsících:
 
 | Značka     | Tržba listopad | Tržba prosinec |
 |------------|----------------|----------------|
@@ -50,7 +50,7 @@ Tento graf ukazuje, které kategorie generovaly nejvyšší **zisk** a jakou mě
 ---
 ## Predikce jaro 2025
 
-Na základě předchozích sezón a zákaznického chování jsme vytvořili predikci nejvýkonnějších kategorií pro jarní období:
+Na základě předchozích sezón a zákaznického chování jsem vytvořila predikci nejvýkonnějších kategorií pro jarní období:
 
 - Nejvyšší odhad tržeb: **Sport a outdoor**
 - Stabilní výkon: **Kosmetika, domácí spotřebiče, kávovary**
@@ -79,7 +79,7 @@ Predikce ukazuje, jak povánoční výprodeje mohou ovlivnit chování zákazní
 ![Modelace](modelace_prodane_mnozstvi_kategorie.jpg)
 
 ### Tržby za drogerii a kosmetiku
-Zde lze vidět pokles v prosinci – doporučujeme zvážit krátkodobou promo akci typu 2+1.
+Zde lze vidět pokles v prosinci – doporučuji zvážit krátkodobou promo akci typu 2+1.
 
 ![Porovnání tržeb za drogerii a kosmetiku](porovnani_trzby_drogerie_kosmetika.jpg)
 
