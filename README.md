@@ -60,10 +60,29 @@ Na základě předchozích sezón a zákaznického chování jsme vytvořili pre
 ---
 ## Klíčové BI závěry
 
-- **Prosinec** přináší vyšší tržby, ale také **vyšší logistické a personální náklady**
-- Ne každé promo přináší vyšší zisk – sledování **marže** je klíčové
-- Výkonné promo potřebuje i **plánování zásob a personálu (HR + Office)**
-- **Spring campaign** by se měla zaměřit na kategorie s vyšší maržovostí
+- Nejvyšší tržby byly v prosinci (52 mil. Kč) – vliv vánočních nákupů.
+- Nejvýnosnější kategorií byly mobily a hodinky.
+- Největší marži měly kávovary (28 %).
+- Tržby za kosmetiku a drogerii klesly – prostor pro promo akce.
+- Predikce pro jaro ukazuje nárůst u sportovních a kosmetických produktů.
+---
+## Výsledky analýzy a vizualizace
+
+### Celková tržba podle měsíců
+![Tržby](images/celkova_trzba_mesice_listopad_prosinec2024.jpg)
+
+### Modelace prodaného množství (Listopad – Leden)
+![Modelace](images/modelace_prodane_mnozstvi_kategorie.jpg)
+
+### Tržby za drogerii a kosmetiku
+![Drogerie a kosmetika](images/porovnanitrzby_za_drogerii_kosmetiku.jpg)
+
+### Tržby podle kategorií
+![Sortiment](images/celkove_trzby_dle_sortimentu.jpg)
+
+### Podíl tržeb za jednotlivé TV modely – Leden 2025
+![TV modely](images/trzby_jednotlivychTVmodelu_leden2025.jpg)
+
 ---
 ## Struktura projektu
 
@@ -72,7 +91,6 @@ Mega-Slevy-BI-Case/
 ├── images/ # grafy (JPG, PNG)
 ├── notebooks/ # analýza v Pythonu (Jupyter)
 ├── README.md # dokumentace
-
 ---
 ## Licence
 Tento projekt slouží jako ukázka analytické práce v rámci portfolia BI Data Analyst.
