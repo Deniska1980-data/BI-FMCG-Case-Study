@@ -1,6 +1,6 @@
 # Mega Slevy – BI Analýza FMCG & Elektronika
 
-## Cíl projektu
+Cíl projektu
 
 Cílem této BI analýzy bylo:
 - Zhodnotit tržby a ziskovost v předvánoční sezóně (listopad a prosinec 2024),
@@ -66,7 +66,7 @@ Na základě předchozích sezón a zákaznického chování jsem vytvořila pre
 - Tržby za kosmetiku a drogerii klesly – prostor pro promo akce.
 - Predikce pro jaro ukazuje nárůst u sportovních a kosmetických produktů.
 ---
-## Výsledky analýzy a vizualizace
+Výsledky analýzy a vizualizace
 
 ### Celková tržba podle měsíců
 Tento graf ukazuje výrazný nárůst tržeb v prosinci díky sezónním akcím a vánočnímu chování zákazníků
