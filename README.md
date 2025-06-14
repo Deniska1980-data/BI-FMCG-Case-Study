@@ -1,6 +1,6 @@
 # Mega Slevy – BI Analýza FMCG & Elektronika
 
-Cíl projektu
+## Cíl projektu
 
 Cílem této BI analýzy bylo:
 - Zhodnotit tržby a ziskovost v předvánoční sezóně (listopad a prosinec 2024),
@@ -104,4 +104,4 @@ Mega-Slevy-BI-Case/
 ├── README.md # dokumentace
 ---
 ## Licence
-Tento projekt slouží jako ukázka analytické práce v rámci portfolia BI Data Analyst.
+Tento projekt vznikol v rámci štúdia kurzu IBM Business Intelligence Essentials a je súčasťou môjho dátového portfólia ako začínajúcej BI analytiky.
