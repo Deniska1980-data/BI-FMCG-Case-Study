@@ -40,13 +40,14 @@ Následující graf ukazuje, jak se změnil zisk napříč jednotlivými kategor
 ---
 ## Porovnání top 5 kategorií podle zisku a marže – Prosinec 2024
 
-SELECT brand,
-       SUM(CASE WHEN month = '2024-11' THEN revenue ELSE 0 END) AS november_revenue,
-       SUM(CASE WHEN month = '2024-12' THEN revenue ELSE 0 END) AS december_revenue
+SELECT category,
+       SUM(profit) AS total_profit,
+       ROUND(SUM(profit) / SUM(revenue) * 100, 2) AS profit_margin_percent
 FROM sales_data
-WHERE category = 'Mobily a hodinky'
-GROUP BY brand
-ORDER BY december_revenue DESC;
+WHERE month = '2024-12'
+GROUP BY category
+ORDER BY total_profit DESC
+LIMIT 5;
 
 Čo robí: porovnáva vývoj tržieb hlavných značiek mobilov medzi mesiacmi.
 
