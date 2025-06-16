@@ -101,6 +101,8 @@ LIMIT 1;
 ```
 ## Analýza výkonu značek mobilních telefonů (11–12/2024)
 
+Následující SQL dotaz zjišťuje, jak si jednotlivé značky mobilních telefonů vedly během klíčového předvánočního období – v listopadu a prosinci 2024:
+
 ```sql
 SELECT 
   LEFT(nazev_produktu, INSTR(nazev_produktu, ' ') - 1) AS znacka,
@@ -114,6 +116,12 @@ WHERE
 GROUP BY znacka, mesic
 ORDER BY trzby_czk DESC;
 
+Porovnání tržeb – Mobily Listopad vs. Prosinec 2024
+
+Závěry z grafu: Všechny značky zaznamenaly vyšší tržby v prosinci. Největší nárůst zaznamenal Samsung – tržby přes 7,5 mil. Kč.
+Huawei prodával pouze v listopadu, ostatní značky dominovaly v prosinci.
+
+Tento výstup je ideálním podkladem pro marketingové plánování předvánočních kampaní.
 ```
 ## Predikce prodeje na leden 2025
 
