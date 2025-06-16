@@ -131,7 +131,7 @@ GROUP BY znacka, mesic
 ORDER BY trzby_czk DESC;
 
 Porovnání tržeb – Mobily Listopad vs. Prosinec 2024
-![Porovnání tržeb – Mobily Listopad vs. Prosinec 2024](./GRAF_porovnani_trzeb_mobily_listopad_vs_prosinec2024.jpg)
+![Porovnání tržeb – Mobily Listopad vs. Prosinec 2024](./GRAF_porovnani_tržby_mobily_listopad_vs_prosinec2024.jpg)
 
 
 Závěry z grafu: Všechny značky zaznamenaly vyšší tržby v prosinci. Největší nárůst zaznamenal Samsung – tržby přes 7,5 mil. Kč.
