@@ -53,8 +53,6 @@ GROUP BY kategorie
 ORDER BY celkovy_zisk_czk DESC
 LIMIT 5;
 
-![image](https://github.com/user-attachments/assets/91f193c4-6cdf-4ebe-a3fb-96ac354fcc21)
-
 ```
 ## Top značky podle tržby (11–12/2024)
 
@@ -67,8 +65,6 @@ WHERE YEAR(datum_prodeje) = 2024 AND MONTH(datum_prodeje) IN (11, 12)
 GROUP BY znacka
 ORDER BY celkova_trzba_czk DESC
 LIMIT 5;
-
-![image](https://github.com/user-attachments/assets/5156b180-a8fa-4a10-8487-6e6f62a4edcf)
 
 ```
 ## Průměrná sleva a zisk podle kategorií (2024)
