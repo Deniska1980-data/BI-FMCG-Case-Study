@@ -36,7 +36,7 @@ Vytvořit predikci nejvýkonnějších kategorií pro jaro 2025
 /python → Jupyter notebooky, predikce, simulace
 README.md → Tento soubor s popisem projektu
 
-![ERD diagram – fmcg_produkty](./images/ERD_fmcg_produkty.png)
+![ERD diagram – fmcg_produkty](./ERD_fmcg_produkty.png)
 
 ## Top 5 kategorií podle zisku a marže (12/2024)
 
