@@ -210,12 +210,12 @@ Tyto kategorie doporučuji podpořit marketingově i zásobováním, protože v 
 
 ![image](https://github.com/user-attachments/assets/e5c435ec-035c-4c7c-a75b-de21d1de6da1)
 
-## Koláčový graf: Podíl značek na celkové tržbě
+## Koláčový graf: Podíl značek na celkové tržbě - ![Koláčový graf – podíl značek](./kolacovy_graf.jpg)
 Období: Listopad + Prosinec 2024
 Celková tržba: 81 752 162 Kč
-![Koláčový graf – podíl značek](./kolacovy_graf.jpg)
 
-## Top_značky_podle_tržby_listopad_prosinec2024
+
+## Zisk a marže podle kategorie_prosinec 2024
 ![GRAF_zisk_a_marze_podle_kategorie_prosinec2024](https://github.com/user-attachments/assets/208e9019-bf1d-40a6-82c4-b670476db894)
 
 
