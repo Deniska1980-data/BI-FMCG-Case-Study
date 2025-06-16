@@ -25,13 +25,13 @@ Vytvořit predikci nejvýkonnějších kategorií pro jaro 2025
 - Na základě sezónních trendů byla vytvořena predikce pro **jaro 2025**, kde dominuje:
   - Sport a outdoor
   - Kosmetika
-  -  Kávovary
+  - Kávovary
   - Domácí spotřebiče
 
-## Struktura složek
+## Struktura složek / Folder structure
 
 /images → Grafy, ERD diagram, vizualizace
-/data → Očištěné datové soubory (.csv)
+/data → Očištěné datové soubory (.csv) 
 /sql → SQL dotazy použití v analýze
 /python → Jupyter notebooky, predikce, simulace
 README.md → Tento soubor s popisem projektu
