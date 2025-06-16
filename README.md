@@ -87,8 +87,6 @@ ORDER BY celkovy_zisk_czk;
 | Mobily a hodinky     | 1,760 mil. Kč  | 1,100 mil. Kč | –660 000 Kč |
 | Počítače a notebooky | 899 tis. Kč    | 725 tis. Kč  | –174 000 Kč |
 
-![image](https://github.com/user-attachments/assets/eba7e092-d991-4730-a0e5-e3beb56bcb9d)
-
 ## Nejprodávanější produkt 2024
 
 ```sql
@@ -115,8 +113,6 @@ WHERE
   AND MONTH(datum_prodeje) IN (11, 12)
 GROUP BY znacka, mesic
 ORDER BY trzby_czk DESC;
-
-![image](https://github.com/user-attachments/assets/effae706-3b4d-43ff-925d-caef6963e033)
 
 ```
 ## Predikce prodeje na leden 2025
