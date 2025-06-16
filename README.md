@@ -1,80 +1,79 @@
-# FMCG – Analýza prodeje spotřebního zboží / FMCG Sales & Margin Case Study (SQL + Python)
+# FMCG – Analýza prodeje spotřebního zboží / FMCG Sales & Margin Case Study
 
-Tento projekt představuje praktickou analýzu prodejních dat z oblasti rychloobrátkového zboží (FMCG) s využitím SQL a Pythonu.  
-**Analýza je postavená na fiktivním datasetu**, který simuluje reálné prodeje, slevy, marže a zákaznické chování v prostředí českého maloobchodu.
+Tento datový projekt analyzuje prodeje a ziskovost ve fiktivním prostředí maloobchodního FMCG segmentu. Pomocí SQL dotazů a Python vizualizací jsou zkoumány tržby, slevy, marže a sezónní trendy.
 
-Cílem bylo procvičit si reálné analytické přístupy, vytvářet byznysové závěry a predikce, a připravit výstupy vhodné pro datovou praxi.
----
-## Cíle projektu
+## Obsah
 
-- Porovnat výkon značek a kategorií napříč měsíci
-- Analyzovat dopad slev na zisk a marži
-- Zjistit, které značky dominují v klíčových obdobích (např. před Vánoci)
-- Modelovat dopad snížení slev na ziskovost
-- Vytvořit predikci nejvýkonnějších kategorií pro jaro 2025
----
+Porovnat výkon značek a kategorií napříč měsíci
+Analyzovat dopad slev na zisk a marži
+Zjistit, které značky dominují v klíčových obdobích (např. před Vánoci)
+Modelovat dopad snížení slev na ziskovost
+Vytvořit predikci nejvýkonnějších kategorií pro jaro 2025
+
 ## Použité nástroje
 
-- **MySQL** – výpočty tržeb, zisků, marží
-- **Python (Pandas, Matplotlib, scikit-learn)** – vizualizace a predikce
-- **Jupyter Notebook** – analýza, simulace a prezentace výstupů
-- **Excel/CSV** – strukturovaný vstupní dataset
----
+- **MySQL** – pro tvorbu dotazů a výpočty tržeb, zisků, marží
+- **Python (Pandas, Matplotlib, scikit-learn)** – pro analýzu, vizualizaci a predikce
+- **Jupyter Notebook** – pro dokumentaci a exploraci
+- **Excel/CSV** – datové vstupy
+
+## Klíčové výstupy
+
+- Nejvyšší tržby byly zaznamenány u značek **iPhone, Samsung, Xiaomi** během prosince 2024
+- Kategorie **TV, mobily a notebooky** měly příliš vysoké slevy → negativní dopad na marži
+- Simulace ukázala, že **snížení slevy na 10 %** by významně zvýšilo celkový zisk
+- Na základě sezónních trendů byla vytvořena predikce pro **jaro 2025**, kde dominuje:
+  - Sport a outdoor
+  - Kosmetika
+  -  Kávovary
+  - Domácí spotřebiče
+
 ## Struktura složek
 
-```
-/images         → Grafy, ERD diagram, vizualizace
-/data           → Očištěné datové soubory (.csv)
-/sql            → SQL dotazy použití v analýze
-/python         → Jupyter notebooky, predikce, simulace
-README.md       → Tento soubor s popisem projektu
----
-## Ukázkový SQL dotaz
----
-## Celková tržba za všechny značky dohromady (11. a 12. měsíc 2024):
-SELECT 
-  SUM(cena_po_sleve * prodane_mnozstvi_ks) AS celkova_trzba_czk
-FROM fmcg_produkty
-WHERE YEAR(datum_prodeje) = 2024 
-  AND MONTH(datum_prodeje) IN (11, 12);
----
-## Top značky podle tržby za období listopad + prosinec 2024.
+/images → Grafy, ERD diagram, vizualizace
+/data → Očištěné datové soubory (.csv)
+/sql → SQL dotazy použití v analýze
+/python → Jupyter notebooky, predikce, simulace
+README.md → Tento soubor s popisem projektu
 
+## Top 5 kategorií podle zisku a marže (12/2024)
+
+```sql
+SELECT 
+  kategorie,
+  SUM((cena_po_sleve - puvodni_cena) * prodane_mnozstvi_ks) AS celkovy_zisk_czk,
+  ROUND(
+    SUM((cena_po_sleve - puvodni_cena) * prodane_mnozstvi_ks) / 
+    NULLIF(SUM(puvodni_cena * prodane_mnozstvi_ks), 0) * 100, 
+    2
+  ) AS marze_percent
+FROM fmcg_produkty
+WHERE MONTH(datum_prodeje) = 12 AND YEAR(datum_prodeje) = 2024
+GROUP BY kategorie
+ORDER BY celkovy_zisk_czk DESC
+LIMIT 5;
+
+![image](https://github.com/user-attachments/assets/91f193c4-6cdf-4ebe-a3fb-96ac354fcc21)
+
+```
+## Top značky podle tržby (11–12/2024)
+
+```sql
 SELECT 
   LEFT(nazev_produktu, INSTR(nazev_produktu, ' ') - 1) AS znacka,
   SUM(cena_po_sleve * prodane_mnozstvi_ks) AS celkova_trzba_czk
 FROM fmcg_produkty
-WHERE 
-  YEAR(datum_prodeje) = 2024
-  AND MONTH(datum_prodeje) IN (11, 12)
+WHERE YEAR(datum_prodeje) = 2024 AND MONTH(datum_prodeje) IN (11, 12)
 GROUP BY znacka
 ORDER BY celkova_trzba_czk DESC
 LIMIT 5;
 
-![image](https://github.com/user-attachments/assets/e48da315-fa9b-4f45-bfc0-93a80a843b0e)
+![image](https://github.com/user-attachments/assets/5156b180-a8fa-4a10-8487-6e6f62a4edcf)
 
-Co dotaz dělá:
-    Část	                          Význam
-LEFT(..., INSTR(...))	    Vybere první slovo z názvu produktu jako značku
-MONTH(...) IN (11, 12)	  Filtruje pouze listopad a prosinec
-SUM(...)	                Spočítá tržbu za značku
-LIMIT 5	                  Vrátí 5 značek s nejvyšší tržbou
-
-Graf: Top 5 značek podle tržby – Listopad a Prosinec 2024
-•	LG dominuje s tržbou přes 13,9 mil. Kč
-•	Za ním: Samsung, PlayStation, Apple, AEG
 ```
-## Koláčový graf: Podíl značek na celkové tržbě
-Období: Listopad + Prosinec 2024
-Celková tržba: 81 752 162 Kč
+## Průměrná sleva a zisk podle kategorií (2024)
 
-Z grafu:
-•	LG dominuje se 17 % podílem
-•	Samsung: 11 %
-•	PlayStation, Apple, AEG mají podíl mezi 6–7 %
-•	Ostatní značky tvoří více než 50 % obratu!
-
-## Zjistit průměrnou procentní slevu a celkový zisk za každou kategorii v roce 2024.
+```sql
 SELECT 
   kategorie,
   ROUND(AVG(procentni_sleva), 2) AS prumerna_sleva_pct,
@@ -83,63 +82,32 @@ FROM fmcg_produkty
 WHERE YEAR(datum_prodeje) = 2024
 GROUP BY kategorie
 ORDER BY celkovy_zisk_czk;
+```
+## Simulace zisku při nižší slevě
 
-## Co jsem zjistila:
-•  vysoké slevy vs. nízký zisk ➤ ⚠️ neefektivní sleva
-⚠️ Přehnané slevy u dražších kategorií → obrovské ztráty
-Kategorie	             Průměrná sleva	     Ztráta
-Mobily a hodinky	       16 %	          –2,6 mil. Kč
-TV a foto	               15 %         	–3,4 mil. Kč
-Velké spotřebiče	       15 %	          –2,2 mil. Kč
-Počítače	             12,4 %	          –1,3 mil. Kč
+| Kategorie            | Zisk (15–16 %) | Zisk (10 %) | Rozdíl    |
+|----------------------|----------------|-------------|-----------|
+| TV a foto            | 1,575 mil. Kč  | 1,050 mil. Kč | –525 000 Kč |
+| Mobily a hodinky     | 1,760 mil. Kč  | 1,100 mil. Kč | –660 000 Kč |
+| Počítače a notebooky | 899 tis. Kč    | 725 tis. Kč  | –174 000 Kč |
 
-## Co z toho plyne?
-•	Vysoké jednotkové ceny + velké slevy → extrémní negativní dopad
-•	Sleva přes 15 % není u high-end elektroniky udržitelná
-•	U počítačů jsi měla slevu nižší (12,4 %), a přesto se dostala do ztráty
-„Vysoké slevy na dražší elektroniku (TV, mobily, bílé zboží) významně snižují celkový zisk. 
+![image](https://github.com/user-attachments/assets/eba7e092-d991-4730-a0e5-e3beb56bcb9d)
 
-## Navrhuji zavést maximální slevový strop pro tyto kategorie pod 10 %.“
+## Nejprodávanější produkt 2024
 
-Období	          Proč se slevuje?	                               Riziko
-Listopad	    Black Friday, Cyber Monday	            Slevy až 30–50 % → může poškodit marži
-Prosinec	  Předvánoční nákupy → boj o zákazníka	   Zákazník nakupuje „všude“, ne podle hodnoty
-Celý Q4	      Tlaky na splnění ročních plánů	         Firmy jdou pod náklady jen kvůli obratu
+```sql
+SELECT 
+  nazev_produktu,
+  SUM(prodane_mnozstvi_ks) AS celkove_kusy
+FROM fmcg_produkty
+WHERE YEAR(datum_prodeje) = 2024
+GROUP BY nazev_produktu
+ORDER BY celkove_kusy DESC
+LIMIT 1;
+```
+## Analýza výkonu značek mobilních telefonů (11–12/2024)
 
-•  Slevy ve výši 15–16 % na drahé zboží (TV, mobily, PC) jsou extrémně rizikové
-•  Záporné zisky v řádech miliónů Kč
-•  Krátkodobě se zvýší obrat → dlouhodobě se ale spálí marže
-
-## Doporučení do závěru projektu:
-„Slevy ve výši nad 15 % na drahé kategorie by měly být silně zvažovány. I přes zvýšení prodejního objemu vedly v listopadu a prosinci 2024 k výrazné ztrátovosti. Doporučuji zavést interní stropy a přesnější monitoring ziskovosti během kampaní jako Black Friday.“
-
-## Simulaci alternativního zisku, pro vybrané kategorie:
-•	TV a foto
-•	Mobily a hodinky
-•	Počítače a notebooky
-
-Nahradíme skutečnou slevu fixní hodnotou 10 % a přepočítáme výnos. Nový výpočet zisku pro každou transakci:
-nová_cena_po_sleve = puvodni_cena * 0.90
-novy_zisk = (puvodni_cena - nova_cena_po_sleve) * prodane_mnozstvi_ks
-
-Pak to sečteme za kategorii a porovnáme s původním ziskem.
-Co kdyby byla sleva pouze 10 % u TV, mobilů a notebooků?
-
-Kategorie              	Původní zisk (se slevou 15–16 %)	       Zisk při 10 % slevě          	Rozdíl
-TV a foto	                   1 575 000 Kč	                            1 050 000 Kč	           –525 000 Kč
-Mobily a hodinky             1 760 000 Kč                            	1 100 000 Kč           	 –660 000 Kč
-Počítače a notebooky	         899 000 Kč	                              725 000 Kč	           –174 000 Kč
-
-Interpretace:
-Nižší sleva = menší atraktivita, ale pozitivní zisk
-V původní analýze byly tyto kategorie ve ztrátě
-Při 10% slevě by ses mohla dostat do černých čísel
-
-![image](https://github.com/user-attachments/assets/993015b8-85c1-41b5-a0c9-cd75b245fcda)
-
-## Závěry z grafu: U všech kategorií je zisk nižší při 10% slevě, ale stále kladný. Skvělý argument pro optimalizaci cenové strategie!
-
-## Výkonnost klíčových značek mobilních telefonů v měsících listopad a prosinec 2024
+```sql
 SELECT 
   LEFT(nazev_produktu, INSTR(nazev_produktu, ' ') - 1) AS znacka,
   MONTH(datum_prodeje) AS mesic,
@@ -152,16 +120,12 @@ WHERE
 GROUP BY znacka, mesic
 ORDER BY trzby_czk DESC;
 
-## Porovnání tržeb – Mobily v listopadu vs. prosinci 2024 (dle skutečnosti)
-•	Huawei prodával jen v listopadu
-•	Apple, Samsung, Xiaomi, Garmin prodávali pouze v prosinci
-•	Jasně vidět dominuje Samsung s tržbou přes 7,5 mil. Kč
+![image](https://github.com/user-attachments/assets/effae706-3b4d-43ff-925d-caef6963e033)
 
-![image](https://github.com/user-attachments/assets/6ef4d6d8-dbdd-4ee4-9654-677be64ac76c)
+```
+## Predikce prodeje na leden 2025
 
-
-## Kolik kusů bude prodáno v lednu, pokud budeme vycházet z výkonu v listopadu a prosinci. 
-## Ukázkový Python kód: predikce kusů za leden
+Python skript -`predikce_leden_2025.py` s využitím lineární regrese.
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
@@ -206,35 +170,25 @@ plt.tight_layout()
 plt.show()
 
 Predikci množství prodaného v lednu 2025 pomocí lineární regrese 📈
-![image](https://github.com/user-attachments/assets/8ea3984c-78c7-4e42-a408-ab9792dc4377)
+![image](https://github.com/user-attachments/assets/781628bd-6f65-4ea4-8a64-72eb310bb192)
 
-# Výstup ukáže:
-Nákupní nápor v listopadu a prosinci
-Očekávaný pokles v lednu
-Pomůže podložit doporučení pro marketing či sklad
-Predikci prodaného množství pro leden 2025 podle kategorií 📦:
-•	Potraviny a Mobily a hodinky povedou prodeje
-•	Očekává se výrazná poptávka i v kategoriích jako Kosmetika nebo Sport a outdoor
-•	Naopak u Foto a TV je predikce nižší, což odpovídá povánočnímu útlumu
-
-![image](https://github.com/user-attachments/assets/ee092672-b107-4790-af4a-bb42624663ba)
-
-# Predikce jaro 2025 na základě sezónního chování a výkonnosti kategorií během celého roku 😉
+## Predikce jaro 2025 na základě sezónního chování a výkonnosti kategorií během celého roku 😉
 Postup:
 1.	Projdem výkonnost kategorií napříč měsíci
 2.	Vyberem ty, které:
 o	mají silný výskyt v jarních měsících (březen–květen)
 o	rostou nebo mají stabilní prodeje
 3.	Vytvořím predikovaný žebříček kategorií pro jaro 2025
-   
-Kategorie	               Výkon v historii	            Sezónní výskyt             Doporučení jaro 2025
-Sport a outdoor	            Rostoucí	                   Ano (jaro)	           Očekává se nejvyšší tržba
-Kosmetika	                  Stabilní	                   Ano	                     Stabilní výkonnost
-Domácí spotřebiče	          Stabilní/rostoucí	           Ano	                    Doporučeno pro promo
-Kávovary	                  Stabilní	                   Ano	                   Doporučeno – vyšší marže
-Mobily a hodinky	          Slabší v jaru	              Nízký výskyt	            Není prioritní segment
 
-# Shrnutí pro případovou studii:
+| Kategorie           | Doporučení            |
+|---------------------|------------------------|
+| Sport a outdoor     | Nejvyšší tržby         |
+| Kosmetika           | Stabilní výkon         |
+| Domácí spotřebiče   | Doporučeno pro promo   |
+| Kávovary            | Dobrá marže            |
+| Mobily a hodinky    | Nízká priorita na jaře |
+
+## Shrnutí pro případovou studii:
 Na základě vývoje kategorií napříč rokem a jejich výskytu v jarním období jsem identifikovala čtyři klíčové segmenty pro období březen–květen 2025:
 Žebříček kategorií pro jaro 2025:
 1.	Sport a outdoor – odhad tržby 7,5 mil. Kč
@@ -243,13 +197,8 @@ Na základě vývoje kategorií napříč rokem a jejich výskytu v jarním obdo
 4.	Kávovary – dobrý poměr tržby a marže
 Tyto kategorie doporučuji podpořit marketingově i zásobováním, protože v předchozích obdobích vykazovaly stabilní růst nebo silnou sezónní poptávku.
 
-![image](https://github.com/user-attachments/assets/0b588922-0f11-4b68-984f-42f8a8aa9e45)
+![image](https://github.com/user-attachments/assets/e5c435ec-035c-4c7c-a75b-de21d1de6da1)
 
-```
-## Poznámka
+## 🧠 Doporučení závěrem
 
-> **Upozornění:** Dataset je fiktivní a byl vytvořen pro výukové účely.  
-> Analytické přístupy, modelování a interpretace odpovídají reálné datové praxi.
-
-## Licence
-Tento projekt vznikol v rámci štúdia kurzu IBM Business Intelligence Essentials a je súčasťou môjho dátového portfólia ako začínajúcej BI analytiky.
+> „Slevy nad 15 % u drahého zboží (mobily, TV, PC) způsobují výrazné ztráty. Doporučujeme stanovit interní strop na slevy a aktivně sledovat ziskovost během kampaní jako Black Friday.“
