@@ -1,6 +1,6 @@
-# Mega Slevy – BI Analýza FMCG & Elektronika
+# Business Intelligence Case Study – FMCG & Electronics Sales
 
-## Cíl projektu
+## Cíl projektu: Mega Slevy – BI Analýza FMCG & Elektronika
 
 Cílem této BI analýzy bylo:
 - Zhodnotit tržby a ziskovost v předvánoční sezóně (listopad a prosinec 2024),
