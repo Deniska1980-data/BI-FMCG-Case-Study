@@ -131,7 +131,7 @@ GROUP BY znacka, mesic
 ORDER BY trzby_czk DESC;
 
 Porovnání tržeb – Mobily Listopad vs. Prosinec 2024
-![Graf mobily – listopad vs. prosinec 2024](./graf_mobily_listopad_vs_prosinec.jpg)
+![Graf mobily – listopad vs. prosinec 2024](graf_mobily_listopad_vs_prosinec.jpg)
 
 Závěry z grafu: Všechny značky zaznamenaly vyšší tržby v prosinci. Největší nárůst zaznamenal Samsung – tržby přes 7,5 mil. Kč.
 Huawei prodával pouze v listopadu, ostatní značky dominovaly v prosinci.
