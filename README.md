@@ -128,14 +128,10 @@ WHERE
 GROUP BY znacka, mesic
 ORDER BY trzby_czk DESC;
 
-Porovnání tržeb – Mobily Listopad vs. Prosinec 2024
-![Porovnání tržeb - Mobily listopad vs. prosinec 2024](graf_mobily_listopad_vs_prosinec.jpg)
-
 Závěry z grafu: Všechny značky zaznamenaly vyšší tržby v prosinci. Největší nárůst zaznamenal Samsung – tržby přes 7,5 mil. Kč.
 Huawei prodával pouze v listopadu, ostatní značky dominovaly v prosinci.
 
 Tento výstup je ideálním podkladem pro marketingové plánování předvánočních kampaní.
-![Top značky podle tržby – listopad a prosinec 2024](top_znacky_trzba_listopad_prosinec2024.jpg)
 
 ```
 ## Predikce prodeje na leden 2025
@@ -220,7 +216,7 @@ Celková tržba: 81 752 162 Kč
 ![Koláčový graf – podíl značek](./kolacovy_graf.jpg)
 
 ## Top_značky_podle_tržby_listopad_prosinec2024
-![Top značky podle tržby – listopad a prosinec 2024](top_znacky_trzba_listopad_prosinec2024.jpg)
+![Zisk a marže podle kategorií – Prosinec 2024](./GRAF_zisk_a_marze_podle_kategorie_prosinec2024.jpg)
 
 ## Doporučený závěrem
 > „Slevy nad 15 % u drahého zboží (mobily, TV, PC) způsobují výrazné ztráty. Doporučujeme stanovit interní strop na slevy a aktivně sledovat ziskovost během kampaní jako Black Friday.“
