@@ -1,118 +1,49 @@
-# Business Intelligence Case Study – FMCG & Electronics Sales
+# FMCG – Analýza prodeje spotřebního zboží / FMCG Sales & Margin Case Study (SQL + Python)
 
-## Cíl projektu: Mega Slevy – BI Analýza FMCG & Elektronika
+Tento projekt představuje praktickou analýzu prodejních dat z oblasti rychloobrátkového zboží (FMCG) s využitím SQL a Pythonu.  
+**Analýza je postavená na fiktivním datasetu**, který simuluje reálné prodeje, slevy, marže a zákaznické chování v prostředí českého maloobchodu.
 
-Cílem této BI analýzy bylo:
-- Zhodnotit tržby a ziskovost v předvánoční sezóně (listopad a prosinec 2024),
-- Vyhodnotit dopad promo akcí (např. 2+1 zdarma),
-- Porovnat vývoj poptávky u konkrétních značek mezi měsíci,
-- Vytvořit predikci pro jarní kampaň 2025.
----
-## Použité technologie
-
-- **Excel** – tvorba a údržba datasetu (FMCG, elektronika)
-- **SQL** – agregace tržeb, průměrů, porovnání měsíců
-- **Python** – výpočty, predikce, vizualizace
-- **AI – ChatGPT** – nápověda při návrhu KPI, struktury, prezentace
----
-## SQL porovnání značek (listopad vs. prosinec)
-
-Porovnávala jsem výkonnost klíčových značek **mobilních telefonů** v měsících:
-
-| Značka     | Tržba listopad | Tržba prosinec |
-|------------|----------------|----------------|
-| iPhone     | 856 000 Kč     | 1 206 000 Kč   |
-| Samsung    | 740 000 Kč     | 1 003 000 Kč   |
-| Huawei     | 402 000 Kč     | 586 000 Kč     |
-| Xiaomi     | 611 000 Kč     | 694 000 Kč     |
-
-**Závěr:** Ve všech značkách došlo k nárůstu tržeb v prosinci, nejvíce u **iPhonu**.
-
-## Porovnání zisku podle kategorií – Listopad vs. Prosinec 2024
-
-Následující graf ukazuje, jak se změnil zisk napříč jednotlivými kategoriemi mezi listopadem a prosincem 2024.
-
-- Největší nárůst zaznamenaly **mobily a hodinky**, **potraviny**, **TV a foto**.
-- Naopak kosmetika, drogerie a kuchyňské potřeby zůstaly spíše stabilní.
-
-![Porovnání zisku – Listopad vs. Prosinec 2024](porovnani_zisku_katergorie_listopad_prosinec2024.jpg)
+Cílem bylo procvičit si reálné analytické přístupy, vytvářet byznysové závěry a predikce, a připravit výstupy vhodné pro datovou praxi.
 
 ---
-## Porovnání top 5 kategorií podle zisku a marže – Prosinec 2024
+## Cíle projektu
 
-SELECT category,
-       SUM(profit) AS total_profit,
-       ROUND(SUM(profit) / SUM(revenue) * 100, 2) AS profit_margin_percent
-FROM sales_data
-WHERE month = '2024-12'
-GROUP BY category
-ORDER BY total_profit DESC
-LIMIT 5;
-
-Čo robí: porovnáva vývoj tržieb hlavných značiek mobilov medzi mesiacmi.
-
-Tento graf ukazuje, které kategorie generovaly nejvyšší **zisk** a jakou měly **marži** v prosinci 2024:
-
-- Nejvyšší zisk: **Mobily a hodinky**
-- Nejvyšší marže: **Kávovary (28 %)**
-
-![Top 5 zisk a marže](top5_zisk_marze_prosinec2024.jpg)
-
+- Porovnat výkon značek a kategorií napříč měsíci
+- Analyzovat dopad slev na zisk a marži
+- Zjistit, které značky dominují v klíčových obdobích (např. před Vánoci)
+- Modelovat dopad snížení slev na ziskovost
+- Vytvořit predikci nejvýkonnějších kategorií pro jaro 2025
 ---
-## Predikce jaro 2025
+## Použité nástroje
 
-Na základě předchozích sezón a zákaznického chování jsem vytvořila predikci nejvýkonnějších kategorií pro jarní období:
-
-- Nejvyšší odhad tržeb: **Sport a outdoor**
-- Stabilní výkon: **Kosmetika, domácí spotřebiče, kávovary**
-- Doporučení: zaměřit promo a zásobování na tyto segmenty
-
-![Predikce jaro 2025](predikce_trzby_jarokampan2025.jpg)
+- **MySQL** – výpočty tržeb, zisků, marží
+- **Python (Pandas, Matplotlib, scikit-learn)** – vizualizace a predikce
+- **Jupyter Notebook** – analýza, simulace a prezentace výstupů
+- **Excel/CSV** – strukturovaný vstupní dataset
 ---
-## Klíčové BI závěry
+## Struktura složek
 
-- Nejvyšší tržby byly v prosinci (52 mil. Kč) – vliv vánočních nákupů.
-- Nejvýnosnější kategorií byly mobily a hodinky.
-- Největší marži měly kávovary (28 %).
-- Tržby za kosmetiku a drogerii klesly – prostor pro promo akce.
-- Predikce pro jaro ukazuje nárůst u sportovních a kosmetických produktů.
+```
+/images         → Grafy, ERD diagram, vizualizace
+/data           → Očištěné datové soubory (.csv)
+/sql            → SQL dotazy použití v analýze
+/python         → Jupyter notebooky, predikce, simulace
+README.md       → Tento soubor s popisem projektu
 ---
-Výsledky analýzy a vizualizace
 
-### Celková tržba podle měsíců
-Tento graf ukazuje výrazný nárůst tržeb v prosinci díky sezónním akcím a vánočnímu chování zákazníků
+## Ukázkový SQL dotaz
 
-![Tržby](celkova_trzba_mesice_listopad_prosinec2024.jpg)
+SELECT znacka, SUM(prodane_mnozstvi_ks * jednotkova_cena) AS trzba
+FROM prodeje
+WHERE datum_prodeje BETWEEN '2024-11-01' AND '2024-12-31'
+GROUP BY znacka
+ORDER BY trzba DESC;
+```
 
-### Modelace prodaného množství (Listopad – Leden)
-Predikce ukazuje, jak povánoční výprodeje mohou ovlivnit chování zákazníků v lednu.
+## Poznámka
 
-![Modelace](modelace_prodane_mnozstvi_kategorie.jpg)
+> **Upozornění:** Dataset je fiktivní a byl vytvořen pro výukové účely.  
+> Analytické přístupy, modelování a interpretace odpovídají reálné datové praxi.
 
-### Tržby za drogerii a kosmetiku
-Zde lze vidět pokles v prosinci – doporučuji zvážit krátkodobou promo akci typu 2+1.
-
-![Porovnání tržeb za drogerii a kosmetiku](porovnani_trzby_drogerie_kosmetika.jpg)
-
-### Tržby podle kategorií
-Top 3 kategorie generující nejvyšší tržby:
-Mobily a hodinky, TV a foto, Počítače a notebooky
-
-![Sortiment](celkove_trzby_dle_sortimentu.jpg)
-
-### Podíl tržeb za jednotlivé TV modely – Leden 2025
-Nejvíce táhne LG OLED 65", vhodné pro akční promo nebo zásobovací prioritu.
-
-![TV modely](trzby_jednotlivychTVmodelu_leden2025.jpg)
-
----
-## Struktura projektu
-
-Mega-Slevy-BI-Case/
-├── data/ # dataset (Excel / CSV)
-├── images/ # grafy (JPG, PNG)
-├── notebooks/ # analýza v Pythonu (Jupyter)
-├── README.md # dokumentace
----
 ## Licence
 Tento projekt vznikol v rámci štúdia kurzu IBM Business Intelligence Essentials a je súčasťou môjho dátového portfólia ako začínajúcej BI analytiky.
