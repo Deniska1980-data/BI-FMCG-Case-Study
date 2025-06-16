@@ -53,6 +53,19 @@ GROUP BY kategorie
 ORDER BY celkovy_zisk_czk DESC
 LIMIT 5;
 
+
+SELECT 
+  SUM(cena_po_sleve * prodane_mnozstvi_ks) AS celkova_trzba_czk
+FROM fmcg_produkty
+WHERE YEAR(datum_prodeje) = 2024 
+  AND MONTH(datum_prodeje) IN (11, 12);
+
+Koláčový graf: Podíl značek na celkové tržbě
+Období: Listopad + Prosinec 2024
+Celková tržba: 81 752 162 Kč
+
+![Podíl značek – koláčový graf](./images/GRAF_podil_značek_celkova_trzba_listopad_prosinec2024.jpg)
+
 ```
 ## Top značky podle tržby (11–12/2024)
 
@@ -65,6 +78,8 @@ WHERE YEAR(datum_prodeje) = 2024 AND MONTH(datum_prodeje) IN (11, 12)
 GROUP BY znacka
 ORDER BY celkova_trzba_czk DESC
 LIMIT 5;
+
+![Top značky podle tržby – listopad a prosinec 2024](./images/top_znacky_trzba_listopad_prosinec2024.jpg)
 
 ```
 ## Průměrná sleva a zisk podle kategorií (2024)
@@ -117,6 +132,7 @@ GROUP BY znacka, mesic
 ORDER BY trzby_czk DESC;
 
 Porovnání tržeb – Mobily Listopad vs. Prosinec 2024
+![Graf – porovnání tržeb](./images/porovnani_mobily_2024.jpg)
 
 Závěry z grafu: Všechny značky zaznamenaly vyšší tržby v prosinci. Největší nárůst zaznamenal Samsung – tržby přes 7,5 mil. Kč.
 Huawei prodával pouze v listopadu, ostatní značky dominovaly v prosinci.
@@ -170,7 +186,7 @@ plt.tight_layout()
 plt.show()
 
 Predikci množství prodaného v lednu 2025 pomocí lineární regrese 📈
-![image](https://github.com/user-attachments/assets/781628bd-6f65-4ea4-8a64-72eb310bb192)
+![Lineární regrese prodaného množství – do ledna 2025](./images/Linearni_regrese_prodaneho_mnostvi_do_leden2025.jpg)
 
 ## Predikce jaro 2025 na základě sezónního chování a výkonnosti kategorií během celého roku 😉
 Postup:
