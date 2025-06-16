@@ -35,6 +35,7 @@ Vytvořit predikci nejvýkonnějších kategorií pro jaro 2025
 /sql → SQL dotazy použití v analýze
 /python → Jupyter notebooky, predikce, simulace
 README.md → Tento soubor s popisem projektu
+![ERD diagram – fmcg_produkty](./images/ERD_fmcg_produkty.png)
 
 ## Top 5 kategorií podle zisku a marže (12/2024)
 
