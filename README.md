@@ -77,7 +77,6 @@ GROUP BY znacka
 ORDER BY celkova_trzba_czk DESC
 LIMIT 5;
 
-![Top značky podle tržby – listopad a prosinec 2024](top_znacky_trzba_listopad_prosinec2024.jpg)
 Graf naleznete na závěr projektu
 ```
 ## Průměrná sleva a zisk podle kategorií (2024)
@@ -219,6 +218,9 @@ Tyto kategorie doporučuji podpořit marketingově i zásobováním, protože v 
 Období: Listopad + Prosinec 2024
 Celková tržba: 81 752 162 Kč
 ![Koláčový graf – podíl značek](./kolacovy_graf.jpg)
+
+## Top_značky_podle_tržby_listopad_prosinec2024
+![Top značky podle tržby – listopad a prosinec 2024](top_znacky_trzba_listopad_prosinec2024.jpg)
 
 ## Doporučený závěrem
 > „Slevy nad 15 % u drahého zboží (mobily, TV, PC) způsobují výrazné ztráty. Doporučujeme stanovit interní strop na slevy a aktivně sledovat ziskovost během kampaní jako Black Friday.“
