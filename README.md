@@ -64,6 +64,11 @@ Koláčový graf: Podíl značek na celkové tržbě
 Období: Listopad + Prosinec 2024
 Celková tržba: 81 752 162 Kč
 
+## Koláčový graf: Podíl značek na celkové tržbě
+Období: Listopad + Prosinec 2024
+Celková tržba: 81 752 162 Kč
+![Koláčový graf – podíl značek](./kolacovy_graf.jpg)
+
 ---
 ## Top značky podle tržby (11–12/2024)
 
@@ -213,7 +218,10 @@ Tyto kategorie doporučuji podpořit marketingově i zásobováním, protože v 
 
 ![image](https://github.com/user-attachments/assets/e5c435ec-035c-4c7c-a75b-de21d1de6da1)
 
-## 🧠 Doporučení závěrem
+## Koláčový graf: Podíl značek na celkové tržbě
+Období: Listopad + Prosinec 2024
+Celková tržba: 81 752 162 Kč
 ![Koláčový graf – podíl značek](./kolacovy_graf.jpg)
 
+## Doporučený závěrem
 > „Slevy nad 15 % u drahého zboží (mobily, TV, PC) způsobují výrazné ztráty. Doporučujeme stanovit interní strop na slevy a aktivně sledovat ziskovost během kampaní jako Black Friday.“
