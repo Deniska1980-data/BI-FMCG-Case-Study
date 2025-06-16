@@ -64,7 +64,7 @@ Koláčový graf: Podíl značek na celkové tržbě
 Období: Listopad + Prosinec 2024
 Celková tržba: 81 752 162 Kč
 
-![Podíl značek – koláčový graf](kolacovy_graf.jpg)
+![kolacovy_graf](kolacovy_graf.jpg)
 ```
 ## Top značky podle tržby (11–12/2024)
 
