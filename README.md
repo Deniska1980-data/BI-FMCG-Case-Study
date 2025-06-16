@@ -216,7 +216,8 @@ Celková tržba: 81 752 162 Kč
 ![Koláčový graf – podíl značek](./kolacovy_graf.jpg)
 
 ## Top_značky_podle_tržby_listopad_prosinec2024
-![Zisk a marže podle kategorií – Prosinec 2024](./GRAF_zisk_a_marze_podle_kategorie_prosinec2024.jpg)
+![GRAF_zisk_a_marze_podle_kategorie_prosinec2024](https://github.com/user-attachments/assets/208e9019-bf1d-40a6-82c4-b670476db894)
+
 
 ## Doporučený závěrem
 > „Slevy nad 15 % u drahého zboží (mobily, TV, PC) způsobují výrazné ztráty. Doporučujeme stanovit interní strop na slevy a aktivně sledovat ziskovost během kampaní jako Black Friday.“
