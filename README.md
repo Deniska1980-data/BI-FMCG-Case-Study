@@ -60,15 +60,10 @@ FROM fmcg_produkty
 WHERE YEAR(datum_prodeje) = 2024 
   AND MONTH(datum_prodeje) IN (11, 12);
 
-Koláčový graf: Podíl značek na celkové tržbě
-Období: Listopad + Prosinec 2024
-Celková tržba: 81 752 162 Kč
-
 ## Koláčový graf: Podíl značek na celkové tržbě
 Období: Listopad + Prosinec 2024
 Celková tržba: 81 752 162 Kč
-![Koláčový graf – podíl značek](./kolacovy_graf.jpg)
-
+Graf naleznete na závěr projektu
 ---
 ## Top značky podle tržby (11–12/2024)
 
@@ -83,7 +78,7 @@ ORDER BY celkova_trzba_czk DESC
 LIMIT 5;
 
 ![Top značky podle tržby – listopad a prosinec 2024](top_znacky_trzba_listopad_prosinec2024.jpg)
-
+Graf naleznete na závěr projektu
 ```
 ## Průměrná sleva a zisk podle kategorií (2024)
 
@@ -141,6 +136,8 @@ Závěry z grafu: Všechny značky zaznamenaly vyšší tržby v prosinci. Nejv�
 Huawei prodával pouze v listopadu, ostatní značky dominovaly v prosinci.
 
 Tento výstup je ideálním podkladem pro marketingové plánování předvánočních kampaní.
+![Top značky podle tržby – listopad a prosinec 2024](top_znacky_trzba_listopad_prosinec2024.jpg)
+
 ```
 ## Predikce prodeje na leden 2025
 
