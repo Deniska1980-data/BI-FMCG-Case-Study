@@ -1,6 +1,7 @@
 # FMCG – Analýza prodeje spotřebního zboží / FMCG Sales & Margin Case Study
 
-Tento datový projekt analyzuje prodeje a ziskovost ve fiktivním prostředí maloobchodního FMCG segmentu. Pomocí SQL dotazů a Python vizualizací jsou zkoumány tržby, slevy, marže a sezónní trendy.
+Tento datový projekt analyzuje prodeje a ziskovost ve fiktivním prostředí maloobchodního FMCG segmentu. Pomocí SQL dotazů a Python vizualizací jsou zkoumány tržby, slevy, marže a sezónní trendy. 
+This data project analyzes sales and profitability in a fictional retail FMCG environment. Using SQL queries and Python visualizations, it explores revenues, discounts, margins, and seasonal trends.
 
 ## Obsah
 
