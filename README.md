@@ -18,6 +18,8 @@ Vytvořit predikci nejvýkonnějších kategorií pro jaro 2025
 - **Excel/CSV** – datové vstupy
 Použitý dataset pro analýzu:  
 📊 [MegaSlevy_elektronika_FMCG_zbozi_Analyza.csv](./MegaSlevy_elektronika_FMCG_zbozi_Analyza.csv)
+Dataset obsahuje očištěné údaje o prodejích, cenách, slevách a kategoriích produktů z období 2024.
+
 ## Klíčové výstupy
 
 - Nejvyšší tržby byly zaznamenány u značek **iPhone, Samsung, Xiaomi** během prosince 2024
