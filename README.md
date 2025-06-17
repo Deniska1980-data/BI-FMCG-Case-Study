@@ -134,6 +134,8 @@ Huawei prodával pouze v listopadu, ostatní značky dominovaly v prosinci.
 Tento výstup je ideálním podkladem pro marketingové plánování předvánočních kampaní.
 
 ```
+![graf_mobily_listopad_vs_prosinec](https://github.com/user-attachments/assets/e2aa5209-b5cf-4928-9db6-10ce61727bc8)
+
 ## Predikce prodeje na leden 2025
 
 Python skript -`predikce_leden_2025.py` s využitím lineární regrese.
