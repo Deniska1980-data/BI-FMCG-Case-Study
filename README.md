@@ -229,7 +229,7 @@ Celková tržba: 81 752 162 Kč
 
 ## 📂 Dataset
 
-Použitý dataset `fmcg_dataset_cz_sk.csv` obsahuje **simulovaná prodejní data** ze segmentů **FMCG a elektroniky** během promo období (např. Vánoce, Black Friday).
+Použitý dataset `MegaSlevy_elektronika_FMCG_zbozi_Analyza.csv` obsahuje **simulovaná prodejní data** ze segmentů **FMCG a elektroniky** během promo období (např. Vánoce, Black Friday).
 
 Sloupce zahrnují:
 - kategorii a název produktu,
@@ -239,4 +239,4 @@ Sloupce zahrnují:
 - počet prodaných kusů,
 - výpočet tržeb a marže.
 
-Data byla ručně vytvořena pro potřeby BI analýzy. Slouží k vyhodnocení efektivity slevových akcí a porovnání výnosnosti různých kategorií.
+Soubor je uložen ve složce `/data` tohoto repozitáře. Data byla ručně vytvořena pro účely BI analýzy – slouží k vyhodnocení efektivity promo akcí a výnosnosti produktových kategorií.
