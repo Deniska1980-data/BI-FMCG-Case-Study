@@ -226,3 +226,17 @@ Celková tržba: 81 752 162 Kč
 
 ## Doporučený závěrem
 > „Slevy nad 15 % u drahého zboží (mobily, TV, PC) způsobují výrazné ztráty. Doporučujeme stanovit interní strop na slevy a aktivně sledovat ziskovost během kampaní jako Black Friday.“
+
+## 📂 Dataset
+
+Použitý dataset `fmcg_dataset_cz_sk.csv` obsahuje **simulovaná prodejní data** ze segmentů **FMCG a elektroniky** během promo období (např. Vánoce, Black Friday).
+
+Sloupce zahrnují:
+- kategorii a název produktu,
+- typ promo akce,
+- původní a zlevněnou cenu,
+- měnu (CZK) 
+- počet prodaných kusů,
+- výpočet tržeb a marže.
+
+Data byla ručně vytvořena pro potřeby BI analýzy. Slouží k vyhodnocení efektivity slevových akcí a porovnání výnosnosti různých kategorií.
